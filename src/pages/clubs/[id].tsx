@@ -53,9 +53,7 @@ const ClubDetail: NextPage = () => {
           ...prevState,
           [`${clube?.id}-${metaId}`]: !prevState[`${clube?.id}-${metaId}`],
         }));
-      } else {
-        console.error('Erro ao atualizar dados:', response.statusText);
-      }
+      } 
     } catch (error) {
       console.error('Erro ao atualizar dados:', error);
     }

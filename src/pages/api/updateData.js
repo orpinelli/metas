@@ -1,6 +1,7 @@
 import fs from 'fs/promises'
 import path from 'path'
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
   if (req.method === 'POST') {
     const { id, metaId } = req.query
@@ -11,11 +12,11 @@ export default async (req, res) => {
       const jsonData = JSON.parse(await fs.readFile(filePath, 'utf-8'))
 
       // Encontre o clube pelo id
-      const clube = jsonData.find((c) => c.id === Number(id))
+      const clube = jsonData.find(c => c.id === Number(id))
 
       if (clube) {
         // Encontre a meta pelo metaId
-        const meta = clube.metas.find((m) => m.metaId === Number(metaId))
+        const meta = clube.metas.find(m => m.metaId === Number(metaId))
 
         if (meta) {
           // Atualize o campo chave da meta

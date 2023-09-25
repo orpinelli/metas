@@ -8,7 +8,7 @@
         "metaId": 2,
         "title": "PRESIDENTE",
         "texto": "Manter atualizado o Regimento Interno do Clube ao menos 2 anos de atualização",
-        "chave": false
+        "chave": true
       },
       {
         "metaId": 3,
