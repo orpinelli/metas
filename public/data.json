@@ -1,0 +1,826 @@
+[
+  {
+    "id": 1,
+    "nome": "Rotaract Club de Aguaí",
+    "fundacao": "22/07/2017",
+    "metas": [
+      {
+        "metaId": 2,
+        "title": "PRESIDENTE",
+        "texto": "Manter atualizado o Regimento Interno do Clube ao menos 2 anos de atualização",
+        "chave": true
+      },
+      {
+        "metaId": 3,
+        "title": "PRESIDENTE",
+        "texto": "Fazer indicação do Presidente eleito 2024-25 no MyRotary até 31/12",
+        "chave": true
+      },
+      {
+        "metaId": 4,
+        "title": "PRESIDENTE",
+        "texto": "Participar de todas as Represetes durante o Ano Rotário 2023-24",
+        "chave": false
+      },
+      {
+        "metaId": 5,
+        "title": "SECRETARIA",
+        "texto": "Entregar os relatórios bimestrais no prazo estipulado pela Representação <br/> - 1º 30/09/2023; <br/> - 2º 30/11/2023 <br/> - 3º 30/01/2024 <br/> - 4º 30/03/2024 <br/> - 5º 30/05/2024",
+        "chave": false
+      },
+      {
+        "metaId": 6,
+        "title": "SECRETARIA",
+        "texto": "Manter atualizado os portais UnyClub, Rotaract Brasil e MyRotary",
+        "chave": false
+      },
+      {
+        "metaId": 7,
+        "title": "SECRETARIA",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 8,
+        "title": "SECRETARIA",
+        "texto": "Participar de todas as Represetes durante o Ano Rotário 2023-24",
+        "chave": false
+      },
+      {
+        "metaId": 9,
+        "title": "QUADRO ASSOCIATIVO",
+        "texto": "Crescimento líquido de pelo menos 2 Associados",
+        "chave": false
+      },
+      {
+        "metaId": 10,
+        "title": "QUADRO ASSOCIATIVO",
+        "texto": "Fazer reconhecimento aos companheiros do clube que apadrinharem novos associados",
+        "chave": false
+      },
+      {
+        "metaId": 11,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 12,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 13,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 14,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 15,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 16,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 17,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 18,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 19,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 20,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 21,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 22,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 23,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 24,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 25,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 26,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 27,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 28,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 29,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 30,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 31,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 32,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 33,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 34,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 35,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 36,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 37,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 38,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 39,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 40,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 41,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      },
+      {
+        "metaId": 42,
+        "title": "INTERNAS DO CLUBE",
+        "texto": "Cadastrar as atas de reunião ordinária no UnyClub",
+        "chave": false
+      }
+    ],
+    "href": "/RotaractClubDeAguaí"
+  },
+  {
+    "id": 2,
+    "nome": "Rotaract Club de Araras União",
+    "fundacao": "13/10/2017",
+    "metas": [
+      {
+        "metaId": 2,
+        "texto": "Meta Comum",
+        "chave": false
+      },
+      {
+        "metaId": 3,
+        "texto": "Meta Comum2",
+        "chave": false
+      },
+      {
+        "metaId": 4,
+        "texto": "Meta Comum3",
+        "chave": false
+      },
+      {
+        "metaId": 5,
+        "texto": "Meta Comum4",
+        "chave": false
+      },
+      {
+        "metaId": 6,
+        "texto": "Meta Comum5",
+        "chave": false
+      },
+      {
+        "metaId": 7,
+        "texto": "Meta Comum6",
+        "chave": false
+      }
+    ],
+    "href": "/RotaractClubDeArarasUnião"
+  },
+  {
+    "id": 3,
+    "nome": "Rotaract Club de Atibaia",
+    "fundacao": "22/07/2017",
+    "metas": [
+      {
+        "metaId": 2,
+        "texto": "Meta Comum",
+        "chave": false
+      },
+      {
+        "metaId": 3,
+        "texto": "Meta Comum2",
+        "chave": false
+      },
+      {
+        "metaId": 4,
+        "texto": "Meta Comum3",
+        "chave": false
+      },
+      {
+        "metaId": 5,
+        "texto": "Meta Comum4",
+        "chave": false
+      },
+      {
+        "metaId": 6,
+        "texto": "Meta Comum5",
+        "chave": false
+      },
+      {
+        "metaId": 7,
+        "texto": "Meta Comum6",
+        "chave": false
+      }
+    ],
+    "href": "/RotaractClubDeAtibaia"
+  },
+  {
+    "id": 4,
+    "nome": "Rotaract Club de Bragança Paulista - Estância",
+    "fundacao": "22/07/2017",
+    "metas": [
+      {
+        "metaId": 2,
+        "texto": "Meta Comum",
+        "chave": false
+      },
+      {
+        "metaId": 3,
+        "texto": "Meta Comum2",
+        "chave": false
+      },
+      {
+        "metaId": 4,
+        "texto": "Meta Comum3",
+        "chave": false
+      },
+      {
+        "metaId": 5,
+        "texto": "Meta Comum4",
+        "chave": false
+      },
+      {
+        "metaId": 6,
+        "texto": "Meta Comum5",
+        "chave": false
+      },
+      {
+        "metaId": 7,
+        "texto": "Meta Comum6",
+        "chave": false
+      }
+    ],
+    "href": "/RotaractClubDeBragançaPaulistaEstância"
+  },
+  {
+    "id": 5,
+    "nome": "Rotaract Club de Campinas",
+    "fundacao": "22/07/2017",
+    "metas": [
+      {
+        "metaId": 2,
+        "texto": "Meta Comum",
+        "chave": false
+      },
+      {
+        "metaId": 3,
+        "texto": "Meta Comum2",
+        "chave": false
+      },
+      {
+        "metaId": 4,
+        "texto": "Meta Comum3",
+        "chave": false
+      },
+      {
+        "metaId": 5,
+        "texto": "Meta Comum4",
+        "chave": false
+      },
+      {
+        "metaId": 6,
+        "texto": "Meta Comum5",
+        "chave": false
+      },
+      {
+        "metaId": 7,
+        "texto": "Meta Comum6",
+        "chave": false
+      }
+    ],
+    "href": "/RotaractClubDeCampinas"
+  },
+  {
+    "id": 6,
+    "nome": "Rotaract Club de Campinas Convivência",
+    "fundacao": "22/07/2017",
+    "metas": [
+      {
+        "metaId": 2,
+        "texto": "Meta Comum",
+        "chave": false
+      },
+      {
+        "metaId": 3,
+        "texto": "Meta Comum2",
+        "chave": false
+      },
+      {
+        "metaId": 4,
+        "texto": "Meta Comum3",
+        "chave": false
+      },
+      {
+        "metaId": 5,
+        "texto": "Meta Comum4",
+        "chave": false
+      },
+      {
+        "metaId": 6,
+        "texto": "Meta Comum5",
+        "chave": false
+      },
+      {
+        "metaId": 7,
+        "texto": "Meta Comum6",
+        "chave": false
+      }
+    ],
+    "href": "/RotaractClubDeCampinasConvivência"
+  },
+  {
+    "id": 7,
+    "nome": "Rotaract Club de Itapira",
+    "fundacao": "22/07/2017",
+    "metas": [
+      {
+        "metaId": 2,
+        "texto": "Meta Comum",
+        "chave": false
+      },
+      {
+        "metaId": 3,
+        "texto": "Meta Comum2",
+        "chave": false
+      },
+      {
+        "metaId": 4,
+        "texto": "Meta Comum3",
+        "chave": false
+      },
+      {
+        "metaId": 5,
+        "texto": "Meta Comum4",
+        "chave": false
+      },
+      {
+        "metaId": 6,
+        "texto": "Meta Comum5",
+        "chave": false
+      },
+      {
+        "metaId": 7,
+        "texto": "Meta Comum6",
+        "chave": false
+      }
+    ],
+    "href": "/RotaractClubDeItapira"
+  },
+  {
+    "id": 8,
+    "nome": "Rotaract Club de Limeira",
+    "fundacao": "22/07/2017",
+    "metas": [
+      {
+        "metaId": 2,
+        "texto": "Meta Comum",
+        "chave": false
+      },
+      {
+        "metaId": 3,
+        "texto": "Meta Comum2",
+        "chave": false
+      },
+      {
+        "metaId": 4,
+        "texto": "Meta Comum3",
+        "chave": false
+      },
+      {
+        "metaId": 5,
+        "texto": "Meta Comum4",
+        "chave": false
+      },
+      {
+        "metaId": 6,
+        "texto": "Meta Comum5",
+        "chave": false
+      },
+      {
+        "metaId": 7,
+        "texto": "Meta Comum6",
+        "chave": false
+      }
+    ],
+    "href": "/RotaractClubDeLimeira"
+  },
+  {
+    "id": 9,
+    "nome": "Rotaract Club de Limeira Morro Azul",
+    "fundacao": "22/07/2017",
+    "metas": [
+      {
+        "metaId": 2,
+        "texto": "Meta Comum",
+        "chave": false
+      },
+      {
+        "metaId": 3,
+        "texto": "Meta Comum2",
+        "chave": false
+      },
+      {
+        "metaId": 4,
+        "texto": "Meta Comum3",
+        "chave": false
+      },
+      {
+        "metaId": 5,
+        "texto": "Meta Comum4",
+        "chave": false
+      },
+      {
+        "metaId": 6,
+        "texto": "Meta Comum5",
+        "chave": false
+      },
+      {
+        "metaId": 7,
+        "texto": "Meta Comum6",
+        "chave": false
+      }
+    ],
+    "href": "/RotaractClubDeLimeiraMorroAzul"
+  },
+  {
+    "id": 10,
+    "nome": "Rotaract Club de Mogi Guaçu",
+    "fundacao": "22/07/2017",
+    "metas": [
+      {
+        "metaId": 2,
+        "texto": "Meta Comum",
+        "chave": false
+      },
+      {
+        "metaId": 3,
+        "texto": "Meta Comum2",
+        "chave": false
+      },
+      {
+        "metaId": 4,
+        "texto": "Meta Comum3",
+        "chave": false
+      },
+      {
+        "metaId": 5,
+        "texto": "Meta Comum4",
+        "chave": false
+      },
+      {
+        "metaId": 6,
+        "texto": "Meta Comum5",
+        "chave": false
+      },
+      {
+        "metaId": 7,
+        "texto": "Meta Comum6",
+        "chave": false
+      }
+    ],
+    "href": "/RotaractClubDeMogiGuaçu"
+  },
+  {
+    "id": 11,
+    "nome": "Rotaract Club de Mogi Mirim",
+    "fundacao": "22/07/2017",
+    "metas": [
+      {
+        "metaId": 2,
+        "texto": "Meta Comum",
+        "chave": false
+      },
+      {
+        "metaId": 3,
+        "texto": "Meta Comum2",
+        "chave": false
+      },
+      {
+        "metaId": 4,
+        "texto": "Meta Comum3",
+        "chave": false
+      },
+      {
+        "metaId": 5,
+        "texto": "Meta Comum4",
+        "chave": false
+      },
+      {
+        "metaId": 6,
+        "texto": "Meta Comum5",
+        "chave": false
+      },
+      {
+        "metaId": 7,
+        "texto": "Meta Comum6",
+        "chave": false
+      }
+    ],
+    "href": "/RotaractClubDeMogiMirim"
+  },
+  {
+    "id": 12,
+    "nome": "Rotaract Club de Socorro",
+    "fundacao": "22/07/2017",
+    "metas": [
+      {
+        "metaId": 2,
+        "texto": "Meta Comum",
+        "chave": false
+      },
+      {
+        "metaId": 3,
+        "texto": "Meta Comum2",
+        "chave": false
+      },
+      {
+        "metaId": 4,
+        "texto": "Meta Comum3",
+        "chave": false
+      },
+      {
+        "metaId": 5,
+        "texto": "Meta Comum4",
+        "chave": false
+      },
+      {
+        "metaId": 6,
+        "texto": "Meta Comum5",
+        "chave": false
+      },
+      {
+        "metaId": 7,
+        "texto": "Meta Comum6",
+        "chave": false
+      }
+    ],
+    "href": "/RotaractClubDeSocorro"
+  },
+  {
+    "id": 13,
+    "nome": "Rotaract Club de São José do Rio Pardo Oeste",
+    "fundacao": "22/07/2017",
+    "metas": [
+      {
+        "metaId": 2,
+        "texto": "Meta Comum",
+        "chave": false
+      },
+      {
+        "metaId": 3,
+        "texto": "Meta Comum2",
+        "chave": false
+      },
+      {
+        "metaId": 4,
+        "texto": "Meta Comum3",
+        "chave": false
+      },
+      {
+        "metaId": 5,
+        "texto": "Meta Comum4",
+        "chave": false
+      },
+      {
+        "metaId": 6,
+        "texto": "Meta Comum5",
+        "chave": false
+      },
+      {
+        "metaId": 7,
+        "texto": "Meta Comum6",
+        "chave": false
+      }
+    ],
+    "href": "/RotaractClubDeSãoJoséDoRioPardoOeste"
+  },
+  {
+    "id": 14,
+    "nome": "Rotaract Club de São João da Boa Vista 2",
+    "fundacao": "22/07/2017",
+    "metas": [
+      {
+        "metaId": 2,
+        "texto": "Meta Comum",
+        "chave": false
+      },
+      {
+        "metaId": 3,
+        "texto": "Meta Comum2",
+        "chave": false
+      },
+      {
+        "metaId": 4,
+        "texto": "Meta Comum3",
+        "chave": false
+      },
+      {
+        "metaId": 5,
+        "texto": "Meta Comum4",
+        "chave": false
+      },
+      {
+        "metaId": 6,
+        "texto": "Meta Comum5",
+        "chave": false
+      },
+      {
+        "metaId": 7,
+        "texto": "Meta Comum6",
+        "chave": false
+      }
+    ],
+    "href": "/RotaractClubDeSãoJoãoDaBoaVista2"
+  },
+  {
+    "id": 15,
+    "nome": "Rotaract Club de Vargem Grande do Sul",
+    "fundacao": "22/07/2017",
+    "metas": [
+      {
+        "metaId": 2,
+        "texto": "Meta Comum",
+        "chave": false
+      },
+      {
+        "metaId": 3,
+        "texto": "Meta Comum2",
+        "chave": false
+      },
+      {
+        "metaId": 4,
+        "texto": "Meta Comum3",
+        "chave": false
+      },
+      {
+        "metaId": 5,
+        "texto": "Meta Comum4",
+        "chave": false
+      },
+      {
+        "metaId": 6,
+        "texto": "Meta Comum5",
+        "chave": false
+      },
+      {
+        "metaId": 7,
+        "texto": "Meta Comum6",
+        "chave": false
+      }
+    ],
+    "href": "/RotaractClubDeVargemGrandeDoSul"
+  },
+  {
+    "id": 16,
+    "nome": "Rotaract Club de Vinhedo e Valinhos - União",
+    "fundacao": "22/07/2017",
+    "metas": [
+      {
+        "metaId": 2,
+        "texto": "Meta Comum",
+        "chave": false
+      },
+      {
+        "metaId": 3,
+        "texto": "Meta Comum2",
+        "chave": false
+      },
+      {
+        "metaId": 4,
+        "texto": "Meta Comum3",
+        "chave": false
+      },
+      {
+        "metaId": 5,
+        "texto": "Meta Comum4",
+        "chave": false
+      },
+      {
+        "metaId": 6,
+        "texto": "Meta Comum5",
+        "chave": false
+      },
+      {
+        "metaId": 7,
+        "texto": "Meta Comum6",
+        "chave": false
+      }
+    ],
+    "href": "/RotaractClubDeVinhedoEValinhosUnião"
+  }
+]
