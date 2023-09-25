@@ -1,58 +1,76 @@
-import { useRouter } from 'next/router'
-import data from '../../../public/data.json'
-import { NextPage } from 'next'
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import styles from '../../../styles/Home.module.css'
+import { useRouter } from 'next/router';
+import data from '../../../public/data.json';
+import { NextPage } from 'next';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import styles from '../../../styles/Home.module.css';
+
+interface Meta {
+  metaId: number;
+  title?: string;
+  texto: string;
+  chave: boolean;
+}
+
+interface Clube {
+  id: number;
+  nome: string;
+  fundacao: string;
+  metas: Meta[];
+  href: string;
+}
+
+interface ProgressoMetas {
+  [key: string]: boolean;
+}
 
 const ClubDetail: NextPage = () => {
-  const router = useRouter()
-  const { id } = router.query
+  const router = useRouter();
+  const { id } = router.query;
 
-  const clube = data.find((c) => c.id === Number(id))
+  const clube: Clube | undefined = data?.find((c) => c.id === Number(id));
 
-  const [progressoMetas, setProgressoMetas] = useState({})
+  const [progressoMetas, setProgressoMetas] = useState<ProgressoMetas>({});
 
-  const [metasComTrue, setMetasComTrue] = useState(0)
+  const [metasComTrue, setMetasComTrue] = useState<number>(0);
 
   useEffect(() => {
-    const count = clube?.metas.filter((meta) => meta.chave === true).length
+    const count: number | undefined = clube?.metas.filter((meta) => meta.chave === true).length;
 
-    setMetasComTrue(count)
-  }, [clube])
+    if (count !== undefined) {
+      setMetasComTrue(count);
+    }
+  }, [clube]);
 
-  const handleCheckboxChange = async (metaId) => {
+  const handleCheckboxChange = async (metaId: number) => {
     try {
-      const response = await fetch(
-        `/api/updateData?id=${clube.id}&metaId=${metaId}`,
-        {
-          method: 'POST'
-        }
-      )
+      const response = await fetch(`/api/updateData?id=${clube?.id}&metaId=${metaId}`, {
+        method: 'POST',
+      });
 
       if (response.ok) {
-        setProgressoMetas((prevState) => ({
+        setProgressoMetas((prevState: ProgressoMetas) => ({
           ...prevState,
-          [`${clube.id}-${metaId}`]: !prevState[`${clube.id}-${metaId}`]
-        }))
+          [`${clube?.id}-${metaId}`]: !prevState[`${clube?.id}-${metaId}`],
+        }));
       } else {
-        console.error('Erro ao atualizar dados:', response.statusText)
+        console.error('Erro ao atualizar dados:', response.statusText);
       }
     } catch (error) {
-      console.error('Erro ao atualizar dados:', error)
+      console.error('Erro ao atualizar dados:', error);
     }
-  }
+  };
 
   useEffect(() => {
-    const progresso = {}
+    const progresso: ProgressoMetas = {};
     clube?.metas.forEach((meta) => {
-      progresso[`${clube.id}-${meta.metaId}`] = meta.chave
-    })
-    setProgressoMetas(progresso)
-  }, [clube])
+      progresso[`${clube?.id}-${meta?.metaId}`] = meta?.chave;
+    });
+    setProgressoMetas(progresso);
+  }, [clube]);
 
   if (!clube) {
-    return <div>Clube não encontrado.</div>
+    return <div>Clube não encontrado.</div>;
   }
 
   return (
@@ -75,25 +93,17 @@ const ClubDetail: NextPage = () => {
               />
               <span
                 style={{
-                  textDecoration: progressoMetas[`${clube.id}-${meta.metaId}`]
-                    ? 'line-through'
-                    : 'none',
-                  color: progressoMetas[`${clube.id}-${meta.metaId}`]
-                    ? 'red'
-                    : 'white'
+                  textDecoration: progressoMetas[`${clube.id}-${meta.metaId}`] ? 'line-through' : 'none',
+                  color: progressoMetas[`${clube.id}-${meta.metaId}`] ? 'red' : 'black',
                 }}
                 className={styles.title}
               >
-                {meta.title}
+                {meta?.title}
               </span>
               <span
                 style={{
-                  textDecoration: progressoMetas[`${clube.id}-${meta.metaId}`]
-                    ? 'line-through'
-                    : 'none',
-                  color: progressoMetas[`${clube.id}-${meta.metaId}`]
-                    ? 'red'
-                    : 'white'
+                  textDecoration: progressoMetas[`${clube.id}-${meta.metaId}`] ? 'line-through' : 'none',
+                  color: progressoMetas[`${clube.id}-${meta.metaId}`] ? 'red' : 'black',
                 }}
               >
                 <div dangerouslySetInnerHTML={{ __html: meta.texto }} />
@@ -103,7 +113,7 @@ const ClubDetail: NextPage = () => {
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default ClubDetail
+export default ClubDetail;
