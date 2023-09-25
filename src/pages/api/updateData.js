@@ -6,10 +6,7 @@ export default async (req, res) => {
   if (req.method === 'POST') {
     const { id, metaId } = req.query
 
-    const filePath = path.join(
-      process.cwd(),
-      'https://seusite.vercel.app/dados.json'
-    ) // Caminho para o arquivo JSON
+    const filePath = path.join(process.cwd(), 'public/data.json') // Caminho para o arquivo JSON
 
     try {
       const jsonData = JSON.parse(await fs.readFile(filePath, 'utf-8'))
