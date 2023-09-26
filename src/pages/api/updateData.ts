@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs/promises'
 import path from 'path'
 
-const filePath = path.join(process.cwd(), 'public/data.json');
+const filePath = path.join(process.cwd(), 'https://metas-roan.vercel.app/data.json');
 
 // Defina a estrutura esperada do JSON
 interface Meta {
@@ -34,6 +34,7 @@ async function loadJsonData() {
 
 loadJsonData()
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'POST') {
     const { id, metaId } = req.query
