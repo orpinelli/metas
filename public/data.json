@@ -14,7 +14,7 @@
         "metaId": 3,
         "title": "PRESIDENTE",
         "texto": "Fazer indicação do Presidente eleito 2024-25 no MyRotary até 31/12",
-        "chave": false
+        "chave": true
       },
       {
         "metaId": 4,
