@@ -18,6 +18,8 @@ export default async (req, res) => {
         if (meta) {
           // Atualize o campo chave da meta
           meta.chave = !meta.chave
+          // Escreva o JSON atualizado de volta no arquivo
+          await fs.writeFile(filePath, JSON.stringify(jsonData, null, 2))
 
           res.status(200).json(jsonData)
         } else {
