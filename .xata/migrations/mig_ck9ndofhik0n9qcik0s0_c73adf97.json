@@ -1,0 +1,16 @@
+{
+  "id": "mig_ck9ndofhik0n9qcik0s0",
+  "parentID": "mig_ck9ndanhik0n9qcik060",
+  "checksum": "1:c73adf97e2b9cefe4c0c18085e74b8088702c7fbc6fee32adb4e0ef39fc23506",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "data_fundacao",
+          "type": "string"
+        },
+        "table": "clubes"
+      }
+    }
+  ]
+}

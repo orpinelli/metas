@@ -1,0 +1,16 @@
+{
+  "id": "mig_ck9nefnhik0n9qcik0t0",
+  "parentID": "mig_ck9nedkod7s6jq411uv0",
+  "checksum": "1:6dfc8010e44a8c69c267d877ef27e0bb6b77935de6fd2e5115317dbd16bf4855",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "descricao",
+          "type": "string"
+        },
+        "table": "metas"
+      }
+    }
+  ]
+}

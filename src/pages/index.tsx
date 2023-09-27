@@ -3,19 +3,36 @@ import styles from '../../styles/Home.module.css'
 import Link from 'next/link'
 import data from '../../public/data.json'
 import { NextPage } from 'next'
+import { useEffect } from 'react'
+import { getXataClient } from "../xata";
 
 const Home: NextPage = () => {
-  const jsonData = {
-    id: 1,
-    nome: 'Rotaract Club de Aguaí',
-    isActive: true // Valor inicial da chave
-  }
 
-  const updateJson = (updatedData: any) => {
-    // Esta função será chamada para atualizar o JSON
-    console.log('JSON atualizado:', updatedData)
-    // Aqui você pode fazer uma solicitação para atualizar o JSON no servidor, se necessário
-  }
+
+    useEffect(() => {
+      async function fetchData() {
+        try {
+          const xata = getXataClient();
+          const page = await xata.db.clubes.getAll();
+          console.log(page)
+          const metas = await xata.db.clubes_metas
+            .select(["clube.nome","meta.descricao", "terminado"])
+            .filter({
+              "clube.id": "rec_ck9ne7megii89o7iap80",
+            })
+            .getAll();
+          
+          console.log(metas)
+  
+        } catch (error) {
+          console.error('Erro:', error);
+        }
+      }
+  
+      fetchData();
+    }, []);
+ 
+
   return (
     <div className={styles.Clubes}>
       <h1>Lista de Clubes</h1>

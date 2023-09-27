@@ -1,0 +1,12 @@
+{
+  "id": "mig_ck9neofhik0n9qcik0ug",
+  "parentID": "mig_ck9nefnhik0n9qcik0t0",
+  "checksum": "1:1bf2359e4b03f1299f52be5c6b53376c70086a108dd3c01cdcd58c3e653280dc",
+  "operations": [
+    {
+      "addTable": {
+        "table": "clubes_metas"
+      }
+    }
+  ]
+}

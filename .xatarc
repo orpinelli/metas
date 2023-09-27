@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Gabriel-Orpinelli-s-workspace-d6rv5m.us-east-1.xata.sh/db/metas",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

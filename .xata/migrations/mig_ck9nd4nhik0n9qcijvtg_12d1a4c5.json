@@ -1,0 +1,11 @@
+{
+  "id": "mig_ck9nd4nhik0n9qcijvtg",
+  "checksum": "1:12d1a4c5749464c7b71af4fe1a8b662fb8f8d3696e114b8e11a8c7a4d5234abf",
+  "operations": [
+    {
+      "addTable": {
+        "table": "clubes"
+      }
+    }
+  ]
+}

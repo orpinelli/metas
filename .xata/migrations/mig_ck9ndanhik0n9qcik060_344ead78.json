@@ -1,0 +1,16 @@
+{
+  "id": "mig_ck9ndanhik0n9qcik060",
+  "parentID": "mig_ck9nd4nhik0n9qcijvtg",
+  "checksum": "1:344ead787c86c999f396cc8628d867b6e4e2b33802a3f81659949a08f9d8805d",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "nome",
+          "type": "string"
+        },
+        "table": "clubes"
+      }
+    }
+  ]
+}

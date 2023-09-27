@@ -1,0 +1,17 @@
+{
+  "id": "mig_ck9nfr4od7s6jq411v10",
+  "parentID": "mig_ck9nfhkegf9p0vfn6jm0",
+  "checksum": "1:05a968633013198aa0a40c9d21dd360f24e1aa9687fa62402fb9dba8a273c5c5",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "terminado",
+          "type": "bool",
+          "defaultValue": "false"
+        },
+        "table": "clubes_metas"
+      }
+    }
+  ]
+}

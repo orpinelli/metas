@@ -14,7 +14,7 @@
         "metaId": 3,
         "title": "PRESIDENTE",
         "texto": "Fazer indicação do Presidente eleito 2024-25 no MyRotary até 31/12",
-        "chave": true
+        "chave": false
       },
       {
         "metaId": 4,
@@ -255,37 +255,12 @@
   },
   {
     "id": 2,
-    "nome": "Rotaract Club de Araras União",
+    "nome": "Rotaract Club de Araras-União",
     "fundacao": "13/10/2017",
     "metas": [
       {
         "metaId": 2,
         "texto": "Meta Comum",
-        "chave": false
-      },
-      {
-        "metaId": 3,
-        "texto": "Meta Comum2",
-        "chave": false
-      },
-      {
-        "metaId": 4,
-        "texto": "Meta Comum3",
-        "chave": false
-      },
-      {
-        "metaId": 5,
-        "texto": "Meta Comum4",
-        "chave": false
-      },
-      {
-        "metaId": 6,
-        "texto": "Meta Comum5",
-        "chave": false
-      },
-      {
-        "metaId": 7,
-        "texto": "Meta Comum6",
         "chave": false
       }
     ],

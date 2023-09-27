@@ -1,0 +1,19 @@
+{
+  "id": "mig_ck9nfafhik0n9qcik10g",
+  "parentID": "mig_ck9net4egf9p0vfn6jig",
+  "checksum": "1:d0a1ad15e3d0cea1f8b7e8445de01d6c2df8944f9129e2e7780169efd7de1e0a",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "meta",
+          "type": "link",
+          "link": {
+            "table": "metas"
+          }
+        },
+        "table": "clubes_metas"
+      }
+    }
+  ]
+}
