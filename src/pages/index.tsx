@@ -11,6 +11,7 @@ const Home: NextPage = () => {
 
     useEffect(() => {
       async function fetchData() {
+        
         try {
           const xata = getXataClient();
           const page = await xata.db.clubes.getAll();
