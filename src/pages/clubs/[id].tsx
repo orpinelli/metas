@@ -1,116 +1,125 @@
 import { useRouter } from 'next/router';
-import data from '../../../public/data.json';
-import { NextPage } from 'next';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from '../../../styles/Home.module.css';
+import { getXataClient } from "../../xata";
 
-interface Meta {
-  metaId: number;
-  title?: string;
-  texto: string;
-  chave: boolean;
-}
 
-interface Clube {
-  id: number;
-  nome: string;
-  fundacao: string;
-  metas: Meta[];
-  href: string;
-}
-
-interface ProgressoMetas {
-  [key: string]: boolean;
-}
-
-const ClubDetail: NextPage = () => {
+const ClubDetail: any = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  const clube: Clube | undefined = data?.find((c) => c.id === Number(id));
+  const [clube, setClube] = useState<any>([]);
+  const [progressoMetas, setProgressoMetas] = useState<any>({});
 
-  const [progressoMetas, setProgressoMetas] = useState<ProgressoMetas>({});
-
-  const [metasComTrue, setMetasComTrue] = useState<number>(0);
-
-  useEffect(() => {
-    const count: number | undefined = clube?.metas.filter((meta) => meta.chave === true).length;
-
-    if (count !== undefined) {
-      setMetasComTrue(count);
-    }
-  }, [clube]);
-
-  const handleCheckboxChange = async (metaId: number) => {
+  async function getClubDetails() {
     try {
-      const response = await fetch(`/api/updateData?id=${clube?.id}&metaId=${metaId}`, {
-        method: 'POST',
-      });
-
-      if (response.ok) {
-        setProgressoMetas((prevState: ProgressoMetas) => ({
-          ...prevState,
-          [`${clube?.id}-${metaId}`]: !prevState[`${clube?.id}-${metaId}`],
-        }));
-      } else {
-        console.error('Erro ao atualizar dados:', response.statusText);
-      }
+      const xata = getXataClient();
+      const records = await xata.db.clubes_metas
+        .select([
+          "id",
+          "terminado",
+          "meta.id",
+          "meta.descricao",
+          "clube.id",
+          "clube.nome",
+          "clube.data_fundacao",
+        ])
+        .filter({
+          "clube.id": id as string,
+        })
+        .getAll();
+        setClube(records);
+    
     } catch (error) {
-      console.error('Erro ao atualizar dados:', error);
+      console.error('Erro ao buscar detalhes do clube:', error);
+      return null;
     }
-  };
+  }
+
+
+  async function PostClubMetas(metaId: any, terminado: boolean) {
+    try {
+      const xata = getXataClient();
+
+         await xata.db.clubes_metas.update(metaId, {
+          terminado: terminado,
+        });
+        await getClubDetails()
+    } catch (error) {
+      console.error('Erro ao buscar detalhes do clube:', error);
+      return null;
+    }
+  }
+  
+  
+
+  function contarTerminadosVerdadeiros(objetos: any) {
+    let contador = 0;
+    for (const objeto of objetos) {
+        if (objeto.terminado === true) {
+            contador++;
+        }
+    }
+    return contador;
+}
+
+const quantidadeTrue = contarTerminadosVerdadeiros(clube);
 
   useEffect(() => {
-    const progresso: ProgressoMetas = {};
-    clube?.metas.forEach((meta) => {
-      progresso[`${clube?.id}-${meta?.metaId}`] = meta?.chave;
-    });
-    setProgressoMetas(progresso);
-  }, [clube]);
+    getClubDetails();
+  }, []);
+
 
   if (!clube) {
     return <div>Clube não encontrado.</div>;
   }
+console.log(clube, 'clube')
 
   return (
     <div className={styles.Clubes}>
       <Link href="/">HOME</Link>
       <h1>Detalhes do Clube</h1>
-      <p>Nome: {clube.nome}</p>
-      <p>Fundação: {clube.fundacao}</p>
-      <h2>Metas CONCLUIDAS: {metasComTrue}</h2>
+      {
+  clube.length > 0 && (
+    <div>
+      <p>Nome: {clube[0].clube.nome}</p>
+      <p>Fundação: {clube[0].clube.data_fundacao}</p>
+    </div>
+  )
+}
+      <h2>Metas CONCLUÍDAS:{quantidadeTrue} </h2>
       <h2>Metas</h2>
       <ul>
-        {clube.metas.map((meta) => (
-          <div className={styles.Clubes} key={meta.metaId}>
-            <div className={styles.Warp}>
-              <input
-                className={styles.input}
-                type="checkbox"
-                checked={progressoMetas[`${clube.id}-${meta.metaId}`]}
-                onChange={() => handleCheckboxChange(meta.metaId)}
-              />
-              <span
-                style={{
-                  textDecoration: progressoMetas[`${clube.id}-${meta.metaId}`] ? 'line-through' : 'none',
-                  color: progressoMetas[`${clube.id}-${meta.metaId}`] ? 'red' : 'black',
-                }}
-                className={styles.title}
-              >
-                {meta?.title}
-              </span>
-              <span
-                style={{
-                  textDecoration: progressoMetas[`${clube.id}-${meta.metaId}`] ? 'line-through' : 'none',
-                  color: progressoMetas[`${clube.id}-${meta.metaId}`] ? 'red' : 'black',
-                }}
-              >
-                <div dangerouslySetInnerHTML={{ __html: meta.texto }} />
-              </span>
-            </div>
-          </div>
-        ))}
+      {clube?.map((meta: any) => (
+      <div className={styles.Clubes} key={`${clube.id}-${meta.id}`}>
+        <div className={styles.Warp}>
+          <input
+            className={styles.input}
+            type="checkbox"
+            checked={meta.terminado}
+            onChange={() => PostClubMetas( meta.id, !meta.terminado)}
+          />
+        <span
+          style={{
+            textDecoration: meta.terminado ? 'line-through' : 'none',
+            color: meta.terminado ? 'red' : 'black',
+          }}
+          className={styles.title}
+        >
+           {meta.meta.descricao}  
+        </span>
+      <span
+        style={{
+          textDecoration:meta.terminado ? 'line-through' : 'none',
+          color:meta.terminado ? 'red' : 'black',
+        }}
+      >
+        <div dangerouslySetInnerHTML={{ __html: meta.descricao }} />
+      </span>
+    </div>
+  </div>
+))}
       </ul>
     </div>
   );

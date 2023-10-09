@@ -1,44 +1,45 @@
+// pages/index.tsx
 import styles from '../../styles/Home.module.css'
-
 import Link from 'next/link'
-import data from '../../public/data.json'
 import { NextPage } from 'next'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { getXataClient } from "../xata";
 
+interface Clube {
+  id: string;
+  nome: string;
+  data_fundacao: string;
+}
+
 const Home: NextPage = () => {
+  const [clubes, setClubes] = useState<Clube[]>([]);
 
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const xata = getXataClient();
+        const clubesData = await xata.db.clubes.getAll();
 
-    useEffect(() => {
-      async function fetchData() {
-        
-        try {
-          const xata = getXataClient();
-          const page = await xata.db.clubes.getAll();
-          console.log(page)
-          const metas = await xata.db.clubes_metas
-            .select(["clube.nome","meta.descricao", "terminado"])
-            .filter({
-              "clube.id": "rec_ck9ne7megii89o7iap80",
-            })
-            .getAll();
-          
-          console.log(metas)
-  
-        } catch (error) {
-          console.error('Erro:', error);
-        }
+        const clubesTransformados: Clube[] = clubesData.map((item) => ({
+          id: item.id,
+          nome: item.nome || "",
+          data_fundacao: item.data_fundacao || "",
+        }));
+
+        setClubes(clubesTransformados);
+      } catch (error) {
+        console.error('Erro:', error);
       }
-  
-      fetchData();
-    }, []);
- 
+    }
+
+    fetchData();
+  }, []);
 
   return (
     <div className={styles.Clubes}>
       <h1>Lista de Clubes</h1>
       <div>
-        {data.map((clube) => (
+        {clubes.map((clube) => (
           <div key={clube.id} className={styles.Clubes}>
             <Link href={`/clubs/${clube.id}`}>
               <span className={styles.Clubes}>{clube.nome}</span>
@@ -47,7 +48,7 @@ const Home: NextPage = () => {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
