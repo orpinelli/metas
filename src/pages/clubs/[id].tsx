@@ -96,7 +96,10 @@ console.log(clube, 'clube')
       <h2>Metas</h2>
       <ul>
       {clube?.map((meta: any) => (
-      <div className={styles.Clubes} key={`${clube.id}-${meta.id}`}>
+      <div className={styles.Clubes} key={`${clube.id}-${meta.id}`}     
+      style={{
+      margin: '24px'
+      }}>
         <div className={styles.Warp}>
         <label
           style={{
@@ -105,7 +108,8 @@ console.log(clube, 'clube')
             cursor: 'pointer'
           }}
           onClick={() => PostClubMetas( meta.id, !meta.terminado)}
-          className={styles.title}
+          className={`${styles.title} ${styles['glow-on-hover']}`}
+          
         >
          <input
          style={{
