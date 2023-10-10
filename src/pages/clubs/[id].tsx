@@ -51,6 +51,9 @@ const ClubDetail: any = () => {
       return null;
     }
   }
+
+
+  
   
   
 
@@ -68,6 +71,7 @@ const quantidadeTrue = contarTerminadosVerdadeiros(clube);
 
   useEffect(() => {
     getClubDetails();
+
   }, []);
 
 
@@ -81,42 +85,38 @@ console.log(clube, 'clube')
       <Link href="/">HOME</Link>
       <h1>Detalhes do Clube</h1>
       {
-  clube.length > 0 && (
-    <div>
-      <p>Nome: {clube[0].clube.nome}</p>
-      <p>Fundação: {clube[0].clube.data_fundacao}</p>
-    </div>
-  )
-}
+        clube.length > 0 && (
+          <div>
+            <p>Nome: {clube[0].clube.nome}</p>
+            <p>Fundação: {clube[0].clube.data_fundacao}</p>
+          </div>
+        )
+      }
       <h2>Metas CONCLUÍDAS:{quantidadeTrue} </h2>
       <h2>Metas</h2>
       <ul>
       {clube?.map((meta: any) => (
       <div className={styles.Clubes} key={`${clube.id}-${meta.id}`}>
         <div className={styles.Warp}>
-          <input
-            className={styles.input}
-            type="checkbox"
-            checked={meta.terminado}
-            onChange={() => PostClubMetas( meta.id, !meta.terminado)}
-          />
-        <span
+        <label
           style={{
             textDecoration: meta.terminado ? 'line-through' : 'none',
             color: meta.terminado ? 'red' : 'black',
+            cursor: 'pointer'
           }}
+          onClick={() => PostClubMetas( meta.id, !meta.terminado)}
           className={styles.title}
         >
-           {meta.meta.descricao}  
-        </span>
-      <span
-        style={{
-          textDecoration:meta.terminado ? 'line-through' : 'none',
-          color:meta.terminado ? 'red' : 'black',
+         <input
+         style={{
+          cursor: 'pointer'
         }}
-      >
-        <div dangerouslySetInnerHTML={{ __html: meta.descricao }} />
-      </span>
+            className={styles.input}
+            type="checkbox"
+            checked={meta.terminado}
+          />
+           {meta.meta.descricao}  
+        </label>
     </div>
   </div>
 ))}
