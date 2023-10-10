@@ -78,7 +78,6 @@ const quantidadeTrue = contarTerminadosVerdadeiros(clube);
   if (!clube) {
     return <div>Clube não encontrado.</div>;
   }
-console.log(clube, 'clube')
 
   return (
     <div className={styles.Clubes}>
@@ -92,7 +91,7 @@ console.log(clube, 'clube')
           </div>
         )
       }
-      <h2>Metas CONCLUÍDAS:{quantidadeTrue} </h2>
+      <h2>Metas CONCLUÍDAS: {quantidadeTrue} </h2>
       <h2>Metas</h2>
       <ul>
       {clube?.map((meta: any) => (
@@ -105,6 +104,7 @@ console.log(clube, 'clube')
           style={{
             textDecoration: meta.terminado ? 'line-through' : 'none',
             color: meta.terminado ? 'red' : 'black',
+            border: meta.terminado ? ' 1px solid red' : ' 1px solid #000',
             cursor: 'pointer'
           }}
           onClick={() => PostClubMetas( meta.id, !meta.terminado)}
@@ -113,7 +113,8 @@ console.log(clube, 'clube')
         >
          <input
          style={{
-          cursor: 'pointer'
+          cursor: 'pointer',
+          marginRight: '4px'
         }}
             className={styles.input}
             type="checkbox"
